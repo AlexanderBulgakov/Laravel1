@@ -60,5 +60,6 @@ Route::get('/find', function () {
 });
 
 Route::get('/page', function () {
-    return response('This is a page', 200);
+    $res = '<strong>This is a page</strong>';
+    return response($res, 200);
 });
