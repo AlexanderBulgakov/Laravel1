@@ -19,7 +19,11 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', PostController::class);
-
+/*
 Route::get('/welcome', function () {
     return 'Welcome to our website!';
+});
+*/
+Route::get('/welcome/{name?}', function (string $name = 'guest') {
+    return "Welcome, {$name}!";
 });
