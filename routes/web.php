@@ -58,3 +58,7 @@ Route::get('/find', function () {
     
     return $res;
 });
+
+Route::get('/page', function () {
+    return response('This is a page', 200);
+});
