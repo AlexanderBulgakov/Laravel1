@@ -46,3 +46,15 @@ Route::get('/year/{year}', function (string $year) {
 Route::get('/age/{age}', function (string $age) {
     return "You are {$age} years old.";
 })->whereNumber('age');
+
+Route::get('/find', function () {
+    $q = request()->query('q');
+
+    if($q){
+        $res = "You are searching for {$q}";
+    } else {
+        $res = 'Please enter a search query';
+    }
+    
+    return $res;
+});
