@@ -1,3 +1,5 @@
+@extends('main')
+@section('content')
 <hr />
 <a style="color:blue;" href="{{ route('posts.index') }}">All</a> | <a style="color:blue;" href="{{ route('posts.show', $post->id) }}">Cancel</a>
 <hr />
@@ -25,3 +27,4 @@
     <br />
     <input type="submit" value="Update">
 </form>
+@endsection

@@ -1,3 +1,5 @@
+@extends('main')
+@section('content')
 <hr />
 <a style="color:green;" href="{{ route('posts.create') }}">Create</a>
 <hr />
@@ -17,3 +19,4 @@
         @endforeach
     </tbody>
 </table>
+@endsection

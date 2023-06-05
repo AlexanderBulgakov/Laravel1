@@ -1,3 +1,5 @@
+@extends('main')
+@section('content')
 <hr />
 <a style="color:blue;" href="{{ route('posts.index') }}">All</a> | <a style="color:green;" href="{{ route('posts.edit', $post->id) }}">Edit</a> | <a style="color:red;" href="javascript:void(0)" onclick="event.preventDefault();document.getElementById('post-{{ $post->id }}').submit();">Delete</a>
 <hr />
@@ -9,3 +11,4 @@
     @csrf
     @method('delete')
 </form>
+@endsection

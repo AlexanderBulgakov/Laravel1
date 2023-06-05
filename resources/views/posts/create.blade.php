@@ -1,3 +1,5 @@
+@extends('main')
+@section('content')
 <hr />
 <a style="color:blue;" href="{{ route('posts.index') }}">All</a>
 <hr />
@@ -24,3 +26,4 @@
     <br />
     <input type="submit" value="Create">
 </form>
+@endsection
