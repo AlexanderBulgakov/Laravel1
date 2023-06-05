@@ -61,6 +61,12 @@ Route::get('/find', function () {
 
 Route::get('/page', function () {
     $res = '<h1>This is a page</h1>';
-    
+
     return response($res, 200);
+});
+
+Route::get('/missing', function () {
+    $res = '<h1>This page is not found</h1>';
+
+    return response($res, 404);
 });
