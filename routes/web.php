@@ -24,6 +24,11 @@ Route::get('/welcome', function () {
     return 'Welcome to our website!';
 });
 */
+/*
 Route::get('/welcome/{name?}', function (string $name = 'guest') {
     return "Welcome, {$name}!";
 });
+*/
+Route::get('/welcome/{name}/{age}', function (string $name, string $age) {
+    return "Welcome, {$name}. You are {$age} years old.";
+})->whereAlpha('name')->whereNumber('age');
