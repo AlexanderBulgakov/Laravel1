@@ -32,3 +32,13 @@ Route::get('/welcome/{name?}', function (string $name = 'guest') {
 Route::get('/welcome/{name}/{age}', function (string $name, string $age) {
     return "Welcome, {$name}. You are {$age} years old.";
 })->whereAlpha('name')->whereNumber('age');
+
+Route::get('/year/{year}', function (string $year) {
+    if($year == date('Y')){
+        $res = 'Yes, this is the current year';
+    } else {
+        $res = 'No, this is not the current year';
+    }
+
+    return $res;
+})->where(['res' => '^\d{4}$']);
