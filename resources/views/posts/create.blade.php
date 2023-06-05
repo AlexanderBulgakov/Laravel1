@@ -12,15 +12,15 @@
     @csrf
     <label for="title">Title</label>
     <br />
-    <input id="title" name="title" type="text" />
+    <input id="title" name="title" type="text" value="{{ old('title') }}" />
     <br />
     <label for="body">Body</label>
     <br />
-    <textarea id="body" name="body"></textarea>
+    <textarea id="body" name="body">{{ old('body') }}</textarea>
     <br />
     <label for="author">Author</label>
     <br />
-    <input id="author" name="author" type="text" />
+    <input id="author" name="author" type="text" value="{{ old('author') }}" />
     <br />
     <input type="submit" value="Create">
 </form>
