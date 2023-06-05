@@ -70,3 +70,10 @@ Route::get('/missing', function () {
 
     return response($res, 404);
 });
+
+Route::get('/public', function () {
+    $res = '<h1>Public Page</h1>';
+
+    return response($res)
+        ->header('Cache-Control', 'no-cache, no-store, must-revalidate');
+});
