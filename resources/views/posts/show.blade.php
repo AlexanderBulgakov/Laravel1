@@ -10,8 +10,8 @@
 <p><strong>{{ $post->author }}</strong></p>
 <div>{{ $post->body }}</div>
 
-<form id="post-{{ $post->id }}" action="{{ route('posts.destroy', $post->id) }}" method="post" style="display:none;">
+<form id="post-{{ $post->id }}" action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display:none;">
     @csrf
-    @method('delete')
+    @method('DELETE')
 </form>
 @endsection

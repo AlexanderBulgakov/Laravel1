@@ -13,9 +13,9 @@
         @endforeach
     </ol>
 @endif
-<form action="{{ route('posts.update', $post->id) }}" method="post">
+<form action="{{ route('posts.update', $post->id) }}" method="POST">
     @csrf
-    @method('patch')
+    @method('PATCH')
     <label for="title">Title</label>
     <br />
     <input id="title" name="title" type="text" value="{{ $post->title }}" />

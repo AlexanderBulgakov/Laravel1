@@ -13,7 +13,7 @@
         @endforeach
     </ol>
 @endif
-<form action="{{ route('posts.store') }}" method="post">
+<form action="{{ route('posts.store') }}" method="POST">
     @csrf
     <label for="title">Title</label>
     <br />
