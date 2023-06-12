@@ -41,7 +41,7 @@ Route::get('/year/{year}', function (string $year) {
     }
 
     return $res;
-})->where(['res' => '^\d{4}$']);
+})->where(['year' => '^\d{4}$']);
 
 Route::get('/age/{age}', function (string $age) {
     return "You are {$age} years old.";
