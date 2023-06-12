@@ -1,4 +1,7 @@
-@extends('main')
+@extends('layouts.main')
+
+@section('title', 'All posts')
+
 @section('content')
 <hr />
 <a style="color:green;" href="{{ route('posts.create') }}">Create</a>
